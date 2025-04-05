@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+
+
+html,body{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: #D4B5F6; */
+    background: linear-gradient(360deg, #D4B5F6, #614583ca);
+    color: black;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container header{
+    text-align: center;
+    font-size: 1.7vw;
+    padding-top: 1.6rem;
+}
+
+.container .card{
+    min-width: 48%;
+    /* min-height: 70%; */
+    /* border: 1px solid red; */
+    margin-top: 1.6em;
+}
+
+.card .tab-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 3rem;
+}
+
+.tab.current-tab{
+    background-color: #dadadaa6;
+    border-radius: 5px;
+}
+
+.card .tab-bar span{
+    color: black;
+    cursor: pointer;
+    padding: 4px 7px;
+    font-weight: bold;
+}
+
+.grant-location.active{
+    display: flex;
+}
+
+.grant-location{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .grant-location img{
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+    width: 110px;
+}
+
+.card .grant-location span{
+    margin-top: 4px;
+}
+
+.card .grant-location button{
+    margin: 1.2rem;
+    padding: 8px 13px;
+    /* background-color: #6f20d03b; */
+    background-color: #7a19f1f9;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.card .grant-location button:hover{
+    /* background-color: #7a19f1f9; */
+    background-color: #6f20d03b; 
+}
+
+
+/* Search Weather */
+.search-tab.active{
+    display: flex;
+}
+
+.search-tab{
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.city-container{
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.city-search{
+    width: 70%;
+    border: 1px solid rgba(148, 133, 133, 0.262);
+    outline: none;
+    padding: 5px 7px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.589);
+}
+
+
+.city-search-btn{
+    padding: 5px 7px;
+    font-size: 16x;
+    border: none;
+    background-color: rgba(27, 27, 160, 0.917);
+    color: white;
+}
+
+.city-search-btn:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 219, 0.984);
+}
+
+.loader.active{
+    display: flex;
+}
+
+.loader{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .loader img{
+    width: 180px;
+}
+
+/* weather info */
+
+.weather-info-container.active{
+    display: block;
+}
+
+.weather-info-container{
+    display: none;
+    padding: 1.2rem;
+    color: white;
+    /* letter-spacing: 1px; */
+}
+
+.city-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.city-info img{
+    padding: 3px 0;
+    width: 60px;
+}
+
+.city-info h1{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.country-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 20px;
+}
+
+.country-container h2{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.country-container img{
+    width: 50px;
+}
+
+.weather-info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 2rem;
+}
+
+
+.weather-info .info-card{
+    background-color: gray;
+    text-align: center;
+    padding: 1.5rem 3rem;
+    border-radius: 5px;
+}
+
+.info-card h2{
+    font-weight: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.weather-info img{
+    width: 50px;
+}
+
+.weather-info h2{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+
+/* For tablet */
+@media (max-width: 769px) {
+    .container header{
+        font-size: 2.4vw;
+    }
+    .container .card{
+        min-width: 85%;
+        min-height: 70%;
+    }
+    .search-tab{
+        width: 100%;
+    }
+    .city-search{
+        width: 70%;
+    }
+}
+
+/* For Mobile */
+@media (max-width: 426px) {
+    .container header{
+        font-size: 3.4vw;
+    }
+    .container .card{
+        min-width: 90%;
+        min-height: 70%;
+    }
+
+    .card .tab-bar{
+        padding: 10px 1.5rem;
+    }
+
+    .weather-info{
+        display: block;
+        
+        font-size: 23px;
+    }
+
+    .weather-info .info-card{
+        margin-bottom: 20px;
+        padding: 3rem 4.8rem;
+    }
+
+    .info-card h2{
+        font-size: 22px;
+    }
+    /* .search-tab{
+        width: 100%;
+    }
+    .city-search{
+        width: 70%;
+    } */
+}

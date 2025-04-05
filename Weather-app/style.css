@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    /* font-weight: 600; */
+    font-style: normal;
+}
+
+html,body{
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #8d2de274, #4b00e030);
+    color: white;
+}
+
+
+
+/* for javascript style */
+
+
+.tab{
+    background-color: rgba(80, 83, 88, 0.425);
+}
+
+
+
+.your-weather.active{
+    display: block;
+}
+
+.grant-location.active{
+    display: block;
+}
+
+
+
+/* main style */
+header{
+    width: 100%;
+    height: 66px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 2rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+nav{
+    min-width: 35%;
+    /* height: 40px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* cursor: pointer; */
+    /* gap: 4%; */
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding-top: 10px;
+    padding: 0 10%;
+    position: relative;
+    font-size: 18px;
+}
+
+nav p{
+    /* background-color: rgb(80 83 88 / 57%); */
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+nav p:hover{
+    /* background-color: rgba(80, 83, 88, 0.887); */
+    background-color: rgba(80, 83, 88, 0.425);
+}
+
+
+/* Loading container */
+.loading-container{
+    text-align: center;
+    display: none;
+}
+
+.loading-container.active{
+    display: block;
+}
+
+
+/* your weather */
+
+/* .your-weather.active{
+    display: block;
+} */
+
+.your-weather{
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    display: none;
+}
+
+.weather-info{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 0.6rem;
+}
+
+.country-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 1.4rem; */
+    gap: 10px;
+}
+
+.country-info p{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.city-info{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.weather-content{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card{
+    width: 13%; 
+    padding: 1.5rem 0;
+    /* gap: 12%; */
+    background-color: rgba(80, 83, 88, 0.425);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.card img{
+    width: 50px;
+
+}
+
+.card h2{
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 0 5px;
+    /* letter-spacing: 1px; */
+}
+
+
+
+/* Search weather */
+
+.search-weather.active{
+    display: block;
+}
+
+.search-weather{
+    display: none;
+    text-align: center;
+    background-color: inherit;
+    margin-bottom: 2rem;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    background-color: none;
+}
+.input-search{
+    min-width: 18%;
+    /* text-align: center; */
+    padding: 8px 10px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+}
+.seach-btn{
+    text-align: center;
+}
+
+/* Grant location */
+.grant-location.active{
+    display: none;
+}
+
+.grant-location{
+    display: block;
+    width: 40%;
+    text-align: center;
+    margin: auto;
+}
+.grant-location img{
+    width: 120px;
+    margin-bottom: 0.8rem;
+}
+.grant-location h2{
+    margin-bottom: 0.8rem;
+}
+.grant-location p{
+    margin-bottom: 0.8rem;
+}
+
+.location-access-btn{
+    padding: 5px 15px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgba(87, 87, 214, 0.336);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media (max-width: 412px) {
+    header{
+        font-size: 16px;
+        padding-top: 2rem;
+    }
+    nav{
+        width: 85%;
+        font-size: 16px;
+        margin-bottom: 1.5rem;
+    }
+    .grant-location{
+        width: 50%;
+    }
+    .grant-location h2{
+        width: 100%;
+        font-size: 18px;
+    }
+    .grant-location p{
+        font-size: 15px;
+    }
+    .location-access-btn{
+        margin-top: 1rem;
+        font-size: 16px;
+    }
+    .input-search{
+        width: 60%;
+        font-size: 17px;
+        padding: 6px 8px;
+    }
+    .card{
+        padding: 15px 0;
+    }
+    .card h2{
+        font-size: 18px;
+    }
+}
