@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100%;
+    text-align: center;
+}
+
+nav{
+    background-color: #081b31;
+    font-size: 35px;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    line-height: 5rem;
+}
+
+.game-container{
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.choice-container{
+    display: flex;
+    margin: 5rem;
+    gap: 2.5rem;
+}
+
+.choice{
+    width: 165px;
+    height: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+img:hover{
+    /* border: 8px solid black;
+    opacity: 0.8; */
+    cursor: pointer;
+}
+
+.choice:hover{
+    background-color: black;
+    /* border-radius: 50%; */
+    /* transition: all 1ms; */
+}
+/* Score board */
+
+.score-container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+#user-score, #com-score{
+    font-size: 4rem;
+}
+
+.msg-container{
+    width: 260px;
+    margin-top: 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+    padding: 0.9rem;
+    letter-spacing: 2px;
+}
+#msg{
+    font-size: 2rem;
+    /* color: white; */
+}

@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html, body{
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+
+.container .header{
+    width: 100%;
+    /* background-image: url(./image/Ugmonk\ website\ design\ -\ Lapa\ Ninja.jpeg); */
+    height: 80px;
+    /* background-color: gray; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-left: 6vw;
+    padding-right: 8vw;
+    font-size: 1.5vw;
+    position: sticky;
+    top: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+/* .container .header .h-mt{
+    margin-top: 2rem;
+} */
+
+.container .header img{
+    width: 100px;
+    cursor: pointer;
+    /* height: 100px; */
+}
+
+.container .header .header-left{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.container .header .header-right{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.container .header .header-right img{
+    width: 25px;
+    height: 25px;
+}
+
+.container .mb-header{
+    display: none;
+}
+
+
+/* Content Box */
+.container .content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* padding: 2rem 8rem; */
+    text-align: center;
+}
+
+.container .content .item{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.container .content .item h2{
+    font-weight: bold;
+}
+
+.container .content .item p{
+    font-size: 1vw;
+    margin-top: 8px;
+}
+
+.content .item .item-img{
+    margin-top: 8px;
+    width: 100px;
+}
+
+.content .item .item-footer{
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.content .item .item-footer .price{
+    font-size: 20px;
+    text-align: center;
+    /* font-weight: 700; */
+    color: rgb(12, 191, 12);
+}
+.content .item .item-footer .add-to-card-btn{
+    padding: 5px 10px;
+    border-radius: 15px;
+    text-transform: capitalize;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+    .container .header{
+        display: none;
+    }
+
+    .container .mb-header{
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-around;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+
+    .container .mb-header .mb-logo{
+        width: 120px;
+        cursor: pointer;
+    }
+
+    .container .mb-header .mb-menu{
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+
+    .container .content{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* padding: 2rem 8rem; */
+        
+    }
+
+    .content .item .item-img{
+        width: 120px;
+    }
+
+    .container .content .item p{
+        font-size: 2vh;
+    }
+}

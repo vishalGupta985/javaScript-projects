@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2vw;
+    gap: 1vw;
+    align-items: center;
+}
+
+.container h2{
+    font-size: 2.5rem;
+}
+
+.container h3{
+    font-size: 1.6rem;
+    margin-bottom: 4vw;
+}
+
+.button-container{
+    /* width: 450px; */
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.button-container .button{
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    border: 6px solid black;
+    cursor: pointer;
+}
+.btn-1{
+    background-color: darkkhaki;
+}
+.btn-2{
+    background-color: darkturquoise;
+}
+.btn-3{
+    background-color: coral;
+}
+.btn-4{
+    background-color: slateblue;
+}
+
+.gameFlase{
+    background-color: white;
+}
+
+.userFlase{
+    background-color: green;
+}
+
+
+@media (max-width: 600px) {
+    .container h3{
+        font-size: 1rem;
+        margin-bottom: 4vw;
+    }
+
+    .button-container{
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 120px);
+        gap: 1.2rem;
+    }
+
+    .button-container .button{
+        width: 120px;
+        height: 120px;
+    }
+}
