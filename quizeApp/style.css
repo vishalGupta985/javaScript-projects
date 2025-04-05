@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: lightskyblue;
+}
+
+.start-btn, .rule-box, .que-box, .result{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.start-btn button{
+    padding: 12px 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(23, 157, 240);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.rule-box.active-rule-box{
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.rule-box{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+    /* max-width: 470px; */
+}
+
+.rule-box .rule-heading{
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.221);
+    padding: 1rem 1.5rem;
+}
+
+.rule-box .rule-info{
+    padding: 1rem 1.5rem;
+}
+
+.rule-box .rule-info p{
+    font-weight: 100;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.rule-box .rule-info p span{
+    color: rgb(132, 6, 250);
+    font-weight: 500;
+}
+
+.rule-box .rule-footer{
+    padding: 1rem 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.221);
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.rule-box .rule-footer button{
+    border-radius: 4px;
+    cursor: pointer;
+    
+    /* background-color: transparent; */
+}
+
+.exit-quiz{
+    border: 1px solid rgb(16, 164, 255);
+    color: rgb(12, 138, 216);
+    font-weight: 700;
+    background-color: transparent;
+    padding: 8px 12px;font-size: 16px;
+    font-weight: 300;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.exit-quiz:hover{
+    background-color: rgba(6, 137, 218, 0.922);
+    color: white;
+}
+
+.restart{
+    background-color: rgb(8, 145, 231);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.restart:hover{
+    background-color: rgb(10, 126, 197);
+}
+
+/* Question box */
+
+.que-box{
+    width: 520px;
+    user-select: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.que-box.active-QueBox{
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.que-box header{
+    position: relative;
+    display: flex;
+    gap: 1.6rem;
+    text-align: center;
+    font-weight: 600;
+    padding: 12px 16px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.que-box header .time-box{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    gap: 0.8rem;
+    color: rgba(8, 87, 119, 0.839);
+    background-color: rgba(135, 207, 235, 0.339);
+}
+
+.que-box header .time-box .time-sec{
+    background-color: black;
+    border-radius: 6px;
+    padding: 4px 10px;
+    color: white;
+}
+
+.que-box header .time_line{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 50%;
+    height: 3px;
+    background-color: red;
+}
+
+.que-box section{
+    padding: 1.3rem 1.6rem;
+}
+
+.que-box section .question{
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 1rem;
+    margin-bottom: 1.3rem;
+}
+
+/* disabled multiple selection */
+.disabled{
+    pointer-events: none;
+}
+
+.option-list .option.correct{
+    border: rgba(146, 228, 146, 0.336);
+    background-color: rgba(146, 228, 146, 0.336);
+}
+.option-list .option.incorrect{
+    border: rgba(229, 136, 136, 0.587);
+    background-color: rgba(229, 136, 136, 0.587);
+}
+.que-box section .option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border: 1px solid skyblue;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 12px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: rgba(73, 64, 64, 0.909);
+    background-color: rgba(135, 207, 235, 0.27);
+}
+
+.que-box section .option:last-child{
+    margin-bottom: 0;
+}
+
+.que-box section .option:hover{
+    background-color: rgba(135, 207, 235, 0.645);
+}
+
+.que-box section .option .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    pad: 5px;
+}
+
+.que-box section .option .icon img{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.que-box section .option .tick-icon{
+    border: 1px solid green;
+}
+
+.que-box section .option .cross-icon{
+    border: 1px solid rgb(221, 5, 5);
+}
+
+.que-box footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.6rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 3px 1px 4px;
+}
+
+.que-box footer .que-count{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.que-box footer .que-count span{
+    font-weight: 600;
+}
+
+
+
+.que-box footer .next-que{
+    display: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    background-color: rgba(34, 73, 201, 0.908);
+}
+
+.que-box footer .next-que:hover{
+    background-color: rgba(12, 41, 233, 0.673);
+}
+
+/* #3062C9E6 */
+/* Rusult section */
+
+.result.active-result{
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.result{
+    max-width: 380px;
+    padding: 2rem 2rem;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.result img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.result p{
+    font-size: 20px;
+    margin-bottom: 0.6rem;
+}
+
+.result button{
+    margin-left: 1rem;
+}
+
+.result .print-result{
+    font-weight: 800;
+}
+
+
+ /* Responsive Design */
+
+@media (max-width: 426px) {
+    html,body{
+        overflow: hidden;
+    }
+    .rule-box{
+        min-width: 350px;
+    }
+    .que-box{
+        width: 350px;
+    }
+
+    .que-box section .question{
+        font-size: 16px;
+    }
+    .que-box section .question{
+        font-size: 14px;
+    }
+    .que-box section .option{
+        padding: 10px 8px;
+    }
+    .result{
+        min-width: 350px; 
+    }
+}

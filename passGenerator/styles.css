@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgb(238,174,232);
+    background: radial-gradient(circle, rgba(238,174,232,1) 0%, rgba(203,233,148,1) 100%);
+}
+
+.card{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid red; */
+}
+
+h1{
+    font-size: 30px;
+    /* text-transform: uppercase; */
+}
+
+.display-container{
+    width: 350px;
+    background-color: rgb(47, 35, 81);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.8rem;
+    border-radius: 5px;
+    border-bottom: 0.35rem solid rgb(135, 25, 136);
+    /* font-size: 25px; */
+}
+
+.display{
+    width: 90%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: yellow;
+    padding: 0 0.7rem;
+    user-select: none;
+}
+.display::placeholder{
+    color: yellow;
+    opacity: 0.5;
+    font-size: 1.5rem;
+}
+
+img{
+    background-color: rgb(47, 35, 81);
+    border: none;
+}
+
+.copyBtn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.toollip{
+    position: absolute;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+    color: white;
+    background-color: violet;
+    font-size: 16px;
+}
+
+.toollip.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+data-copy:hover{
+    cursor: pointer;
+}
+
+.input-container{
+    width: 350px;
+    padding: 1.3rem 0.7rem;
+    background-color: rgb(47, 35, 81);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-radius: 5px;
+    /* padding: 0.8rem 2rem; */
+}
+
+
+
+.range-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.range-container p:first-child{
+    font-size: 20px;
+}
+.range-container p:nth-child(2){
+    color: yellow;
+    font-size: 20px;
+}
+
+
+.slider{
+    appearance: none;
+    margin-left: 0.5rem;
+    width: 95%;
+    height: 0.75rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(197, 23, 115);
+}
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    box-shadow: 0px 0px 20px 0px rgba(255, 231, 61, 0, 0.50);
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.slider:focus{
+    outline: 2px solid yellow;
+    /* opacity: 0.8; */
+}
+
+.slider::-webkit-slider-thumb:hover{
+    outline: 3px solid yellow;
+    background-color: rgb(197, 23, 115);
+    box-shadow: 0px 0px 20px 5px rgba(255, 231, 61, 0, 0.80);
+}
+.select-box{
+    /* font-size: 20px; */
+    display: flex;
+    gap: 10px;
+    margin: 0.5rem 0;
+    font-size: 18px;
+    appearance: none;
+}
+
+.select-box .input{
+    width: 43px;
+    position: relative;
+}
+/* 
+.select-box input:checked{
+    background-color: cyan;
+}
+
+.select-box input:checked::before{
+    position: absolute;
+    content: '✓';
+} */
+
+label{
+    margin-left: -10px;
+}
+.strength{
+    margin: 0.5rem 1rem 1rem 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.strength p{
+    font-size: 20px;
+}
+
+.indicator{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+button{
+    padding: 0.5rem;
+    border-bottom: 0.35rem solid yellow;
+    border-radius: 5px;
+    font-size: 25px;
+}
+button, input:hover{
+    cursor: pointer;
+}
+
+.generateButton{
+    background-color: rgb(197, 23, 115);
+    color: yellow;
+}
+
+
+
+
+/* handler Slider {
+    setIndicator("#ccc");
+} */
