@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.calContainer{
+    border: 1px solid black;
+    width: 200px;
+}
+
+input{
+    width: 85%;
+    height: 30px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.Cal-Btn{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px 10px;
+}
+.btn{
+    width: 45px;
+    height: 45px;
+    margin: 3px;
+    font-size: 20px;
+}

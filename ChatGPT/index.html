@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <!-- google font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    </style>
+    <!-- for icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <!-- user chat -->
+        <!-- <div class="chat outgoing">
+            <div class="chat-content">
+                <div class="chat-details">
+                    <img src="./image/icons8-user-100.png" alt="user icon">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, facilis!</p>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- answer chat -->
+        <!-- <div class="chat incoming">
+            <div class="chat-content">
+                <div class="chat-details">
+                    <img src="./image/icons8-chatgpt-64.png" alt="chat-gpt icon">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, facilis!</p>
+                </div>
+                <span><i class="ri-file-copy-line"></i></span>
+            </div>
+        </div> -->
+
+        <!-- Typing Animation -->
+        <!-- <div class="chat incoming">
+            <div class="chat-content">
+                <div class="chat-details">
+                    <img src="./image/icons8-chatgpt-64.png" alt="chat-gpt icon">
+                    <div class="typing-animation">
+                        <div class="typing-dot" style="--delay: 0.2s"></div>
+                        <div class="typing-dot" style="--delay: 0.3s"></div>
+                        <div class="typing-dot" style="--delay: 0.4s"></div>
+                    </div>
+                </div>
+                <span><i class="ri-file-copy-line"></i></span>
+            </div>
+        </div> -->
+
+        <!-- Typing -->
+        <div class="typing-container">
+            <div class="typing-content">
+                <div class="typing-textarea">
+                    <textarea id="chatInput" placeholder="Enter your prompt here" required></textarea>
+                    <i id="sendBtn" class="ri-send-plane-2-fill"></i>
+                </div>
+                <div class="typing-control">
+                    <i id="theme-btn" class="ri-sun-fill"></i>
+                    <i class="ri-delete-bin-6-fill"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
